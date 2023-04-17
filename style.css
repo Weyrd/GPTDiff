@@ -1,0 +1,52 @@
+#GPTDiv {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 500px;
+    padding: 30px 20px 10px 20px;
+    margin-top: 50px;
+    z-index: 9999;
+    background-color: aliceblue;
+    transform: translateX(300px);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    filter: grayscale(100%);
+}
+
+#GPTDiv.active {
+    transform: translateX(0);
+    overflow: scroll;
+}
+
+#GPTDiv > .arrow {
+    user-select: none;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    transform: translateX(-300px) rotate(90deg);
+    transition: all 0.3s;
+}
+
+#GPTDiv.active > .arrow {
+    transform: rotate(-90deg);
+    color: black;
+}
+
+#GPTDiv > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#GPTDiv > form > input, #GPTDiv > form > button, #GPTDiv > .answer {
+    width: 100%;
+}
+
+#GPTDiv > form > .input {
+    margin-bottom: 5px;
+}
